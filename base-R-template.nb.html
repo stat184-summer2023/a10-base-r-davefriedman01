@@ -1763,13 +1763,30 @@ display: none;
 dataset</h4>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjpbImRhdGEoaXJpcykiLCJpcmlzWzEwLCA1XSJdfQ== -->
+<!-- rnb-source-begin eyJkYXRhIjpbImRhdGEoaXJpcykiLCIiLCIgICAgICAgICAgICAgICAgICAgICAgIGlyaXNbMTAsIDVdIl19 -->
 <pre class="r"><code>data(iris)
-iris[10, 5]</code></pre>
+
+                       iris[10, 5]</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-output-begin eyJkYXRhIjoiWzFdIHNldG9zYVxuTGV2ZWxzOiBzZXRvc2EgdmVyc2ljb2xvciB2aXJnaW5pY2FcbiJ9 -->
 <pre><code>[1] setosa
 Levels: setosa versicolor virginica</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiICAgICAgICAgIGFzLmNoYXJhY3RlcihpcmlzWzEwLCA1XSkifQ== -->
+<pre class="r"><code>          as.character(iris[10, 5])</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwic2V0b3NhXCJcbiJ9 -->
+<pre><code>[1] &quot;setosa&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjoic2V0b3NhXG4ifQ== -->
+<pre><code>setosa</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYXMuZmFjdG9yKGFzLmNoYXJhY3RlcihpcmlzWzEwLCA1XSkpIn0= -->
+<pre class="r"><code>as.factor(as.character(iris[10, 5]))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIHNldG9zYVxuTGV2ZWxzOiBzZXRvc2FcbiJ9 -->
+<pre><code>[1] setosa
+Levels: setosa</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -1779,6 +1796,86 @@ Levels: setosa versicolor virginica</code></pre>
 last 5 rows of that column</h4>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiICAgICAgICAgICAgIGlyaXNbKGxlbmd0aChpcmlzJFNwZWNpZXMpIC0gNCk6bGVuZ3RoKGlyaXMkU3BlY2llcyksJ1NwZWNpZXMnXSJ9 -->
+<pre class="r"><code>             iris[(length(iris$Species) - 4):length(iris$Species),&#39;Species&#39;]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIHZpcmdpbmljYSB2aXJnaW5pY2EgdmlyZ2luaWNhIHZpcmdpbmljYSB2aXJnaW5pY2FcbkxldmVsczogc2V0b3NhIHZlcnNpY29sb3IgdmlyZ2luaWNhXG4ifQ== -->
+<pre><code>[1] virginica virginica virginica virginica virginica
+Levels: setosa versicolor virginica</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYXMuY2hhcmFjdGVyKGlyaXNbKGxlbmd0aChpcmlzJFNwZWNpZXMpIC0gNCk6bGVuZ3RoKGlyaXMkU3BlY2llcyksJ1NwZWNpZXMnXSkifQ== -->
+<pre class="r"><code>as.character(iris[(length(iris$Species) - 4):length(iris$Species),&#39;Species&#39;])</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwidmlyZ2luaWNhXCIgXCJ2aXJnaW5pY2FcIiBcInZpcmdpbmljYVwiIFwidmlyZ2luaWNhXCIgXCJ2aXJnaW5pY2FcIlxuIn0= -->
+<pre><code>[1] &quot;virginica&quot; &quot;virginica&quot; &quot;virginica&quot; &quot;virginica&quot; &quot;virginica&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjpbInZpcmdpbmljYVxuIiwidmlyZ2luaWNhXG4iLCJ2aXJnaW5pY2FcbiIsInZpcmdpbmljYVxuIiwidmlyZ2luaWNhXG4iXX0= -->
+<pre><code>virginica
+
+virginica
+
+virginica
+
+virginica
+
+virginica</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoidGFpbChpcmlzJFNwZWNpZXMsIG4gPSA1KSJ9 -->
+<pre class="r"><code>tail(iris$Species, n = 5)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIHZpcmdpbmljYSB2aXJnaW5pY2EgdmlyZ2luaWNhIHZpcmdpbmljYSB2aXJnaW5pY2FcbkxldmVsczogc2V0b3NhIHZlcnNpY29sb3IgdmlyZ2luaWNhXG4ifQ== -->
+<pre><code>[1] virginica virginica virginica virginica virginica
+Levels: setosa versicolor virginica</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYXMuY2hhcmFjdGVyKHRhaWwoaXJpcyRTcGVjaWVzLCBuID0gNSkpIn0= -->
+<pre class="r"><code>as.character(tail(iris$Species, n = 5))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwidmlyZ2luaWNhXCIgXCJ2aXJnaW5pY2FcIiBcInZpcmdpbmljYVwiIFwidmlyZ2luaWNhXCIgXCJ2aXJnaW5pY2FcIlxuIn0= -->
+<pre><code>[1] &quot;virginica&quot; &quot;virginica&quot; &quot;virginica&quot; &quot;virginica&quot; &quot;virginica&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjpbInZpcmdpbmljYVxuIiwidmlyZ2luaWNhXG4iLCJ2aXJnaW5pY2FcbiIsInZpcmdpbmljYVxuIiwidmlyZ2luaWNhXG4iXX0= -->
+<pre><code>virginica
+
+virginica
+
+virginica
+
+virginica
+
+virginica</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiICAgICAgICAgICAgIHRhaWwoaXJpc1tbJ1NwZWNpZXMnXV0sIG4gPSA1KSJ9 -->
+<pre class="r"><code>             tail(iris[[&#39;Species&#39;]], n = 5)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIHZpcmdpbmljYSB2aXJnaW5pY2EgdmlyZ2luaWNhIHZpcmdpbmljYSB2aXJnaW5pY2FcbkxldmVsczogc2V0b3NhIHZlcnNpY29sb3IgdmlyZ2luaWNhXG4ifQ== -->
+<pre><code>[1] virginica virginica virginica virginica virginica
+Levels: setosa versicolor virginica</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYXMuY2hhcmFjdGVyKHRhaWwoaXJpc1tbJ1NwZWNpZXMnXV0sIG4gPSA1KSkifQ== -->
+<pre class="r"><code>as.character(tail(iris[[&#39;Species&#39;]], n = 5))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIFwidmlyZ2luaWNhXCIgXCJ2aXJnaW5pY2FcIiBcInZpcmdpbmljYVwiIFwidmlyZ2luaWNhXCIgXCJ2aXJnaW5pY2FcIlxuIn0= -->
+<pre><code>[1] &quot;virginica&quot; &quot;virginica&quot; &quot;virginica&quot; &quot;virginica&quot; &quot;virginica&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-output-begin eyJkYXRhIjpbInZpcmdpbmljYVxuIiwidmlyZ2luaWNhXG4iLCJ2aXJnaW5pY2FcbiIsInZpcmdpbmljYVxuIiwidmlyZ2luaWNhXG4iXX0= -->
+<pre><code>virginica
+
+virginica
+
+virginica
+
+virginica
+
+virginica</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoidGFpbChpcmlzWydTcGVjaWVzJ10sIG4gPSA1KSJ9 -->
+<pre class="r"><code>tail(iris[&#39;Species&#39;], n = 5)</code></pre>
+<!-- rnb-source-end -->
+<div data-pagedtable="false">
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Species"],"name":[1],"type":["fct"],"align":["left"]}],"data":[{"1":"virginica","_rn_":"146"},{"1":"virginica","_rn_":"147"},{"1":"virginica","_rn_":"148"},{"1":"virginica","_rn_":"149"},{"1":"virginica","_rn_":"150"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -1787,6 +1884,12 @@ last 5 rows of that column</h4>
 greater than 1?</h4>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoibWVhbihpcmlzJFNlcGFsLkxlbmd0aFtpcmlzJFBldGFsLldpZHRoID4gMV0pIn0= -->
+<pre class="r"><code>mean(iris$Sepal.Length[iris$Petal.Width &gt; 1])</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDYuMzI1ODA2XG4ifQ== -->
+<pre><code>[1] 6.325806</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -1800,6 +1903,27 @@ number by 3), and if the number is greater than or equal to 5 print the
 multiple of 2 (multiply the number by 2).</h4>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiZm9yIChpIGluIDE6MTApIHtcbiAgaWYgKGkgPCA1KSB7XG4gICAgcHJpbnQoaSAqIDMpXG4gIH0gZWxzZSB7XG4gICAgcHJpbnQoaSAqIDIpXG4gIH1cbn0ifQ== -->
+<pre class="r"><code>for (i in 1:10) {
+  if (i &lt; 5) {
+    print(i * 3)
+  } else {
+    print(i * 2)
+  }
+}</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiWzFdIDNcblsxXSA2XG5bMV0gOVxuWzFdIDEyXG5bMV0gMTBcblsxXSAxMlxuWzFdIDE0XG5bMV0gMTZcblsxXSAxOFxuWzFdIDIwXG4ifQ== -->
+<pre><code>[1] 3
+[1] 6
+[1] 9
+[1] 12
+[1] 10
+[1] 12
+[1] 14
+[1] 16
+[1] 18
+[1] 20</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 </div>
@@ -1904,7 +2028,7 @@ and standard deviation 1 and plot a histogram. Make the bins blue.</p>
 </div>
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAgIkExMCAtIEJhc2UgUiIKYXV0aG9yOiAiRGF2ZSBGcmllZG1hbiIKZGF0ZTogICAiMjAgSnVuIDIwMjMiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCiMjIyBRdWVzdGlvbiAxOiBTdWJzZXR0aW5nCgojIyMjIFNlbGVjdCB0aGUgZWxlbWVudCBpbiAxMHRoIHJvdyBhbmQgNXRoIGNvbHVtbiBpbiBgaXJpc2AgZGF0YXNldAoKYGBge3J9CmRhdGEoaXJpcykKaXJpc1sxMCwgNV0KYGBgCgojIyMjIFNlbGVjdCB0aGUgU3BlY2llcyBjb2x1bW4gaW4gYGlyaXNgIGRhdGFzZXQgYW5kIHByaW50IHRoZSBsYXN0IDUgcm93cyBvZiB0aGF0IGNvbHVtbgpgYGB7cn0KCmBgYAoKCiMjIyMgV2hhdCBpcyB0aGUgYXZlcmFnZSBTZXBhbCBMZW5ndGggb2YgZmxvd2VycyB3aXRoIFBldGFsIHdpZHRocyBncmVhdGVyIHRoYW4gMT8gCgpgYGB7cn0KCgpgYGAKCiMjIyBRdWVzdGlvbiAyOiBGb3IgTG9vcHMKCiMjIyMgV3JpdGUgYSBgZm9yYCBsb29wIHRoYXQgaXRlcmF0ZXMgb3ZlciB0aGUgbnVtYmVycyAxIHRvIDEwLiBJZiB0aGUgbnVtYmVyIGxlc3MgdGhhbiA1IHByaW50IHRoZSBtdWx0aXBsZSBvZiAzIChtdWx0aXBseSB0aGUgbnVtYmVyIGJ5IDMpLCBhbmQgaWYgdGhlIG51bWJlciBpcyBncmVhdGVyIHRoYW4gb3IgZXF1YWwgdG8gNSBwcmludCB0aGUgbXVsdGlwbGUgb2YgMiAobXVsdGlwbHkgdGhlIG51bWJlciBieSAyKS4gCgpgYGB7cn0KCmBgYAoKIyMjIFF1ZXN0aW9uIDM6IFdoaWxlIGxvb3BzCgojIyMjIFdyaXRlIGEgYHdoaWxlYCBsb29wIHRoYXQgcHJpbnRzIG91dCByYW5kb20gbm9ybWFsIG51bWJlcnMgd2l0aCBtZWFuIGVxdWFsIDEgYW5kIHN0YW5kYXJkIGRldmlhdGlvbiAyICh1c2Ugcm5vcm0oKSkgYnV0IHN0b3BzIChicmVha3MpIGlmIHlvdSBnZXQgYSBudW1iZXIgYmlnZ2VyIHRoYW4gMy4gRG8gbm90IGNoYW5nZSB0aGUgdmFsdWUgaW5zaWRlIHNldC5zZWVlZC4KYGBge3J9CnNldC5zZWVkKDE4NCkKCmBgYAoKIyMjIFF1ZXN0aW9uIDQ6IGZvciBsb29wcyBpbiBkYXRhIHRhYmxlcwoKIyMjIyBVc2UgYSBuZXN0ZWQgZm9yIGxvb3AgdGhhdCBwcm9kdWNlcyB0aGUgZm9sbG93aW5nIGRhdGEgZnJhbWUuIE5hbWUgdGhlIGRhdGFmcmFtZSAgYENvdW50aW5nYCBhbmQgdGhlIHZhcmlhYmxlcyAoY29sdW1ucykgIFYxLCBWMiwgVjMsIGFuZCBWNC4gIChUaGVyZSBhcmUgMyBsb29wcykuIAoKSGludDogRmlyc3QgaWRlbnRpZnkgdGhlIHBhdHRlcm4ocykgaW4gdGhlIHRhYmxlIGJlZm9yZSB5b3UgY3JlYXRlIHRoZSBmb3IgbG9vcC4KCnwgVjEgfCBWMiB8IFYzIHwgVjQgfCAgCnw6LS0gfDotLSB8Oi0tIHw6LS0gfAp8IDEgfCAyIHwgMyB8IDQgfCAgCnwgMiB8IDMgfCA0IHwgNSB8ICAKfCAzIHwgNCB8IDUgfCA2IHwgIAoKYGBge3J9CgpgYGAKCiMjIyBRdWVzdGlvbiA1OiB1c2VyIGRlZmluZWQgZnVuY3Rpb25zCgojIyMjIDVBKSBDb21wbGV0ZSB0aGUgZm9sbG93aW5nIHVzZXIgZGVmaW5lIGZ1bmN0aW9uIHRvIGdlbmVyYXRlIGBuYCByYW5kb20gbm9ybWFsIG51bWJlcnMgd2l0aCBhIGdpdmVuIG1lYW4gYW5kIHN0YW5kYXJkIGRldmlhdGlvbiBhbmQgcGxvdCBhIGhpc3RvZ3JhbSBvZiBpdC4gRG8gbm90IGNoYW5nZSAgdGhlIHNlZWQgbnVtYmVyIGluIHNldC5zZWVkLiBZb3UgY2FuIHVzZSB0aGUgZnVuY3Rpb24gYGhpc3RgIHRvIHBsb3QgdGhlIGhpc3RvZ3JhbS4gIAoKIyMjIyMgNUIpIFRoZW4gY2FsbCB0aGUgZnVuY3Rpb24gdG8gZ2VuZXJhdGUgMTAwMCByYW5kb20gbm9ybWFsIG51bWJlcnMgd2l0aCBtZWFuIDAgYW5kIHN0YW5kYXJkIGRldmlhdGlvbiAxIGFuZCBwbG90IGEgaGlzdG9ncmFtIG9mIGl0LgoKYGBge3J9CnNldC5zZWVkKDE4NCkKcGxvdE5vcm1hbCA8LSBmdW5jdGlvbihyZXBpdGlvbnMsIG1lYW4sIHNkKXsKICAKfQoKCmBgYAoKIyMjIyMgRXh0cmEgQ3JlZGl0OiAKClJlcGVhdCBwYXJ0cyA1QSBhbmQgNUIsIGFuZCBhZGQgCgoxLiBBIHRpdGxlIHRoYXQgc2F5ICJIaXN0b2dyYW0gZnJvbSBhIE5vcm1hbChgbWVhbmAsIGBzZGApIERpc3RyaWJ1dGlvbiIsIGJ1dCB0aGUgdXNlciBnaXZlbiB2YWx1ZXMgb2YgYG1lYW5gIGFuZCBgc2RgLgoyLiBhbiBhcmd1bWVudCB0byBjaGFuZ2UgdGhlIGNvbG9yIG9mIHRoZSBoaXN0b2dyYW0uICAKCkNhbGwgdGhlIGZ1bmN0aW9uIHRvIGdlbmVyYXRlIDEwMDAgcmFuZG9tIG5vcm1hbCBudW1iZXJzIHdpdGggbWVhbiAwIGFuZCBzdGFuZGFyZCBkZXZpYXRpb24gMSBhbmQgcGxvdCBhIGhpc3RvZ3JhbS4gTWFrZSB0aGUgYmlucyBibHVlLgoKYGBge3J9CgoKCmBgYAo=</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAgIkExMCAtIEJhc2UgUiIKYXV0aG9yOiAiRGF2ZSBGcmllZG1hbiIKZGF0ZTogICAiMjAgSnVuIDIwMjMiCm91dHB1dDogaHRtbF9ub3RlYm9vawotLS0KCiMjIyBRdWVzdGlvbiAxOiBTdWJzZXR0aW5nCgojIyMjIFNlbGVjdCB0aGUgZWxlbWVudCBpbiAxMHRoIHJvdyBhbmQgNXRoIGNvbHVtbiBpbiBgaXJpc2AgZGF0YXNldAoKYGBge3J9CmRhdGEoaXJpcykKCiAgICAgICAgICAgICAgICAgICAgICAgaXJpc1sxMCwgNV0KICAgICAgICAgIGFzLmNoYXJhY3RlcihpcmlzWzEwLCA1XSkKYXMuZmFjdG9yKGFzLmNoYXJhY3RlcihpcmlzWzEwLCA1XSkpCmBgYAoKIyMjIyBTZWxlY3QgdGhlIFNwZWNpZXMgY29sdW1uIGluIGBpcmlzYCBkYXRhc2V0IGFuZCBwcmludCB0aGUgbGFzdCA1IHJvd3Mgb2YgdGhhdCBjb2x1bW4KYGBge3J9CiAgICAgICAgICAgICBpcmlzWyhsZW5ndGgoaXJpcyRTcGVjaWVzKSAtIDQpOmxlbmd0aChpcmlzJFNwZWNpZXMpLCdTcGVjaWVzJ10KYXMuY2hhcmFjdGVyKGlyaXNbKGxlbmd0aChpcmlzJFNwZWNpZXMpIC0gNCk6bGVuZ3RoKGlyaXMkU3BlY2llcyksJ1NwZWNpZXMnXSkKCnRhaWwoaXJpcyRTcGVjaWVzLCBuID0gNSkKYXMuY2hhcmFjdGVyKHRhaWwoaXJpcyRTcGVjaWVzLCBuID0gNSkpCgogICAgICAgICAgICAgdGFpbChpcmlzW1snU3BlY2llcyddXSwgbiA9IDUpCmFzLmNoYXJhY3Rlcih0YWlsKGlyaXNbWydTcGVjaWVzJ11dLCBuID0gNSkpCgp0YWlsKGlyaXNbJ1NwZWNpZXMnXSwgbiA9IDUpCmBgYAoKIyMjIyBXaGF0IGlzIHRoZSBhdmVyYWdlIFNlcGFsIExlbmd0aCBvZiBmbG93ZXJzIHdpdGggUGV0YWwgd2lkdGhzIGdyZWF0ZXIgdGhhbiAxPyAKCmBgYHtyfQptZWFuKGlyaXMkU2VwYWwuTGVuZ3RoW2lyaXMkUGV0YWwuV2lkdGggPiAxXSkKYGBgCgojIyMgUXVlc3Rpb24gMjogRm9yIExvb3BzCgojIyMjIFdyaXRlIGEgYGZvcmAgbG9vcCB0aGF0IGl0ZXJhdGVzIG92ZXIgdGhlIG51bWJlcnMgMSB0byAxMC4gSWYgdGhlIG51bWJlciBsZXNzIHRoYW4gNSBwcmludCB0aGUgbXVsdGlwbGUgb2YgMyAobXVsdGlwbHkgdGhlIG51bWJlciBieSAzKSwgYW5kIGlmIHRoZSBudW1iZXIgaXMgZ3JlYXRlciB0aGFuIG9yIGVxdWFsIHRvIDUgcHJpbnQgdGhlIG11bHRpcGxlIG9mIDIgKG11bHRpcGx5IHRoZSBudW1iZXIgYnkgMikuIAoKYGBge3J9CmZvciAoaSBpbiAxOjEwKSB7CiAgaWYgKGkgPCA1KSB7CiAgICBwcmludChpICogMykKICB9IGVsc2UgewogICAgcHJpbnQoaSAqIDIpCiAgfQp9CmBgYAoKIyMjIFF1ZXN0aW9uIDM6IFdoaWxlIGxvb3BzCgojIyMjIFdyaXRlIGEgYHdoaWxlYCBsb29wIHRoYXQgcHJpbnRzIG91dCByYW5kb20gbm9ybWFsIG51bWJlcnMgd2l0aCBtZWFuIGVxdWFsIDEgYW5kIHN0YW5kYXJkIGRldmlhdGlvbiAyICh1c2Ugcm5vcm0oKSkgYnV0IHN0b3BzIChicmVha3MpIGlmIHlvdSBnZXQgYSBudW1iZXIgYmlnZ2VyIHRoYW4gMy4gRG8gbm90IGNoYW5nZSB0aGUgdmFsdWUgaW5zaWRlIHNldC5zZWVlZC4KYGBge3J9CnNldC5zZWVkKDE4NCkKCmBgYAoKIyMjIFF1ZXN0aW9uIDQ6IGZvciBsb29wcyBpbiBkYXRhIHRhYmxlcwoKIyMjIyBVc2UgYSBuZXN0ZWQgZm9yIGxvb3AgdGhhdCBwcm9kdWNlcyB0aGUgZm9sbG93aW5nIGRhdGEgZnJhbWUuIE5hbWUgdGhlIGRhdGFmcmFtZSAgYENvdW50aW5nYCBhbmQgdGhlIHZhcmlhYmxlcyAoY29sdW1ucykgIFYxLCBWMiwgVjMsIGFuZCBWNC4gIChUaGVyZSBhcmUgMyBsb29wcykuIAoKSGludDogRmlyc3QgaWRlbnRpZnkgdGhlIHBhdHRlcm4ocykgaW4gdGhlIHRhYmxlIGJlZm9yZSB5b3UgY3JlYXRlIHRoZSBmb3IgbG9vcC4KCnwgVjEgfCBWMiB8IFYzIHwgVjQgfCAgCnw6LS0gfDotLSB8Oi0tIHw6LS0gfAp8IDEgfCAyIHwgMyB8IDQgfCAgCnwgMiB8IDMgfCA0IHwgNSB8ICAKfCAzIHwgNCB8IDUgfCA2IHwgIAoKYGBge3J9CgpgYGAKCiMjIyBRdWVzdGlvbiA1OiB1c2VyIGRlZmluZWQgZnVuY3Rpb25zCgojIyMjIDVBKSBDb21wbGV0ZSB0aGUgZm9sbG93aW5nIHVzZXIgZGVmaW5lIGZ1bmN0aW9uIHRvIGdlbmVyYXRlIGBuYCByYW5kb20gbm9ybWFsIG51bWJlcnMgd2l0aCBhIGdpdmVuIG1lYW4gYW5kIHN0YW5kYXJkIGRldmlhdGlvbiBhbmQgcGxvdCBhIGhpc3RvZ3JhbSBvZiBpdC4gRG8gbm90IGNoYW5nZSAgdGhlIHNlZWQgbnVtYmVyIGluIHNldC5zZWVkLiBZb3UgY2FuIHVzZSB0aGUgZnVuY3Rpb24gYGhpc3RgIHRvIHBsb3QgdGhlIGhpc3RvZ3JhbS4gIAoKIyMjIyMgNUIpIFRoZW4gY2FsbCB0aGUgZnVuY3Rpb24gdG8gZ2VuZXJhdGUgMTAwMCByYW5kb20gbm9ybWFsIG51bWJlcnMgd2l0aCBtZWFuIDAgYW5kIHN0YW5kYXJkIGRldmlhdGlvbiAxIGFuZCBwbG90IGEgaGlzdG9ncmFtIG9mIGl0LgoKYGBge3J9CnNldC5zZWVkKDE4NCkKcGxvdE5vcm1hbCA8LSBmdW5jdGlvbihyZXBpdGlvbnMsIG1lYW4sIHNkKXsKICAKfQoKCmBgYAoKIyMjIyMgRXh0cmEgQ3JlZGl0OiAKClJlcGVhdCBwYXJ0cyA1QSBhbmQgNUIsIGFuZCBhZGQgCgoxLiBBIHRpdGxlIHRoYXQgc2F5ICJIaXN0b2dyYW0gZnJvbSBhIE5vcm1hbChgbWVhbmAsIGBzZGApIERpc3RyaWJ1dGlvbiIsIGJ1dCB0aGUgdXNlciBnaXZlbiB2YWx1ZXMgb2YgYG1lYW5gIGFuZCBgc2RgLgoyLiBhbiBhcmd1bWVudCB0byBjaGFuZ2UgdGhlIGNvbG9yIG9mIHRoZSBoaXN0b2dyYW0uICAKCkNhbGwgdGhlIGZ1bmN0aW9uIHRvIGdlbmVyYXRlIDEwMDAgcmFuZG9tIG5vcm1hbCBudW1iZXJzIHdpdGggbWVhbiAwIGFuZCBzdGFuZGFyZCBkZXZpYXRpb24gMSBhbmQgcGxvdCBhIGhpc3RvZ3JhbS4gTWFrZSB0aGUgYmlucyBibHVlLgoKYGBge3J9CgoKCmBgYAo=</div>
 
 
 
