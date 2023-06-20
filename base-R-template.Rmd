@@ -97,11 +97,11 @@ Counting
 
 ```{r}
 set.seed(184)
-plotNormal <- function(repitions, mean, sd){
-  
+
+plotNormal <- function (repetitions, mean, sd) {
+  hist(x = rnorm(n = repetitions, mean = mean, sd = sd))
 }
-
-
+plotNormal(1000, 0, 1)
 ```
 
 ##### Extra Credit: 
@@ -114,7 +114,14 @@ Repeat parts 5A and 5B, and add
 Call the function to generate 1000 random normal numbers with mean 0 and standard deviation 1 and plot a histogram. Make the bins blue.
 
 ```{r}
+set.seed(184)
 
-
-
+plotNormal <- function (repetitions, mean, sd) {
+  hist(
+    col  = 'blue',
+    main = paste('Histogram from a Normal(', mean, ',' , sd, ') Distribution'),
+    x    = rnorm(n = repetitions, mean = mean, sd = sd)
+  )
+}
+plotNormal(1000, 0, 1)
 ```
