@@ -1,9 +1,8 @@
 ---
-title: "Fix the title"
-author: "Your Name Here"
-date: "Add the date"
-output: 
-    html_notebook
+title:  "A10 - Base R"
+author: "Dave Friedman"
+date:   "20 Jun 2023"
+output: html_notebook
 ---
 
 ### Question 1: Subsetting
@@ -13,14 +12,24 @@ output:
 ```{r}
 data(iris)
 
+                       iris[10, 5]
+          as.character(iris[10, 5])
+as.factor(as.character(iris[10, 5]))
 ```
-
 
 #### Select the Species column in `iris` dataset and print the last 5 rows of that column
 ```{r}
+             iris[(length(iris$Species) - 4):length(iris$Species),'Species']
+as.character(iris[(length(iris$Species) - 4):length(iris$Species),'Species'])
 
+tail(iris$Species, n = 5)
+as.character(tail(iris$Species, n = 5))
+
+             tail(iris[['Species']], n = 5)
+as.character(tail(iris[['Species']], n = 5))
+
+tail(iris['Species'], n = 5)
 ```
-
 
 #### What is the average Sepal Length of flowers with Petal widths greater than 1? 
 
